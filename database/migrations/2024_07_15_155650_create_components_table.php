@@ -17,9 +17,12 @@ return new class extends Migration
             $table->string("name");
             $table->string("image");
             $table->longText("description");
-            $table->foreignId("");
-            $table->foreignId("");
-            $table->foreignId("");
+            $table->foreignId("diode_id")->constrained()->cascadeOnDelete();
+            $table->foreignId("bypass_id")->constrained()->cascadeOnDelete();
+            $table->foreignId("block_id")->constrained()->cascadeOnDelete();
+            $table->foreignId("battery_id")->constrained()->cascadeOnDelete();
+            $table->foreignId("li_ion_id")->constrained()->cascadeOnDelete();
+            $table->foreignId("li_pol_id")->constrained()->cascadeOnDelete();
             $table->timestamps();
         });
     }

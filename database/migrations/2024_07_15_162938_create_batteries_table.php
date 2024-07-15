@@ -11,14 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('bulbs', function (Blueprint $table) {
+        Schema::create('batteries', function (Blueprint $table) {
             $table->id();
             $table->string("title");
             $table->string("name");
             $table->string("image");
+            $table->foreignId("li_ion_id")->constrained()->cascadeOnDelete();
+            $table->foreignId("li_pol_id")->constrained()->cascadeOnDelete();
             $table->longText("description");
-            $table->foreignId("large_buld_id")->constrained()->cascadeOnDelete();
-            $table->foreignId("samll_bulb_id")->constrained()->cascadeOnDelete();
             $table->timestamps();
         });
     }
@@ -28,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('bulbs');
+        Schema::dropIfExists('batteries');
     }
 };

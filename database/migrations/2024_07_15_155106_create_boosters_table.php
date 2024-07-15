@@ -16,8 +16,8 @@ return new class extends Migration
             $table->string("title");
             $table->string("name");
             $table->string("image");
-            $table->foreignId("dc_to_dc_id");
-            $table->foreignId("ac_to_ac_id");
+            $table->foreignId("dc_to_dc_id")->constrained()->cascadeOnDelete();
+            $table->foreignId("ac_to_ac_id")->constrained()->cascadeOnDelete();
             $table->timestamps();
         });
     }

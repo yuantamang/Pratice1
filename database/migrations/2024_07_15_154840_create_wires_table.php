@@ -17,8 +17,8 @@ return new class extends Migration
             $table->string("name");
             $table->string("image");
             $table->longText("description");
-            $table->foreignId("thick_wire_id");
-            $table->foreignId("thin_wire_id");
+            $table->foreignId("thick_wire_id")->constrained()->cascadeOnDelete();
+            $table->foreignId("thin_wire_id")->constrained()->cascadeOnDelete();
             $table->timestamps();
         });
     }
