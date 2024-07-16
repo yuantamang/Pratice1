@@ -18,6 +18,7 @@ class CategoreyResource extends Resource
     protected static ?string $model = Categorey::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationGroup ="Main";
 
     public static function form(Form $form): Form
     {

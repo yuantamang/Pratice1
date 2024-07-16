@@ -18,6 +18,7 @@ class BulbResource extends Resource
     protected static ?string $model = Bulb::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationGroup ="Bulbs";
 
     public static function form(Form $form): Form
     {

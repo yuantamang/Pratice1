@@ -18,6 +18,7 @@ class BatteryResource extends Resource
     protected static ?string $model = Battery::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationGroup ="Batteries";
 
     public static function form(Form $form): Form
     {

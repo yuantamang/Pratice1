@@ -18,6 +18,7 @@ class DiodeResource extends Resource
     protected static ?string $model = Diode::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationGroup ="Multiuses";
 
     public static function form(Form $form): Form
     {
