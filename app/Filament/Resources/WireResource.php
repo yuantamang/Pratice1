@@ -17,7 +17,7 @@ class WireResource extends Resource
 {
     protected static ?string $model = Wire::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-queue-list';
     protected static ?string $navigationGroup ="Wires";
 
     public static function form(Form $form): Form

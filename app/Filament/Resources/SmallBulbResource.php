@@ -17,7 +17,7 @@ class SmallBulbResource extends Resource
 {
     protected static ?string $model = SmallBulb::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-folder-plus';
     protected static ?string $navigationGroup ="Bulbs";
 
     public static function form(Form $form): Form

@@ -17,7 +17,7 @@ class ThinWireResource extends Resource
 {
     protected static ?string $model = ThinWire::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-server';
     protected static ?string $navigationGroup ="Wires";
 
     public static function form(Form $form): Form

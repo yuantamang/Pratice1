@@ -17,7 +17,7 @@ class AcToAcResource extends Resource
 {
     protected static ?string $model = AcToAc::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-cog-6-tooth';
     protected static ?string $navigationGroup ="Boosting";
 
     public static function form(Form $form): Form

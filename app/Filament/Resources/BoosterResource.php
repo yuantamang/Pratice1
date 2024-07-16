@@ -17,7 +17,7 @@ class BoosterResource extends Resource
 {
     protected static ?string $model = Booster::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-cog-8-tooth';
     protected static ?string $navigationGroup ="Boosting";
 
     public static function form(Form $form): Form

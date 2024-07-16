@@ -17,7 +17,7 @@ class LiIonResource extends Resource
 {
     protected static ?string $model = LiIon::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-battery-50';
     protected static ?string $navigationGroup ="Batteries";
 
     public static function form(Form $form): Form
