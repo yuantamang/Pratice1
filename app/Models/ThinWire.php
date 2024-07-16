@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class ThinWire extends Model
 {
     use HasFactory;
+    protected $casts = [
+        'image' => 'array',
+    ];
 }

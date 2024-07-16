@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class DcToDc extends Model
 {
     use HasFactory;
+    protected $casts = [
+        'image' => 'array',
+    ];
 }

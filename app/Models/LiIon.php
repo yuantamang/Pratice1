@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class LiIon extends Model
 {
     use HasFactory;
+    protected $casts = [
+        'image' => 'array',
+    ];
 }
