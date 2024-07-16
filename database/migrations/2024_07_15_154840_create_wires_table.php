@@ -13,12 +13,12 @@ return new class extends Migration
     {
         Schema::create('wires', function (Blueprint $table) {
             $table->id();
-            $table->string("title");
-            $table->string("name");
-            $table->string("image");
+            $table->string("title")->nullable();
+            $table->string("name")->nullable();
+            $table->string("image")->nullable();
+            $table->foreignId("categorey_id")->constrained()->cascadeOnDelete();
+            $table->foreignId("product_id")->constrained()->cascadeOnDelete();
             $table->longText("description");
-            $table->foreignId("thick_wire_id")->constrained()->cascadeOnDelete();
-            $table->foreignId("thin_wire_id")->constrained()->cascadeOnDelete();
             $table->timestamps();
         });
     }

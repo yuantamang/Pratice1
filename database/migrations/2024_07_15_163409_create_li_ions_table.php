@@ -16,6 +16,10 @@ return new class extends Migration
             $table->string("title");
             $table->string("name");
             $table->string("image");
+            $table->foreignId("product_id")->constrained()->cascadeOnDelete();
+            $table->foreignId("categorey_id")->constrained()->cascadeOnDelete();
+            $table->foreignId("component_id")->constrained()->cascadeOnDelete();
+            $table->foreignId("battery_id")->constrained()->cascadeOnDelete();
             $table->longText("description");
             $table->timestamps();
         });

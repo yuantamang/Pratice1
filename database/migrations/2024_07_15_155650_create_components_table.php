@@ -15,14 +15,10 @@ return new class extends Migration
             $table->id();
             $table->string("title");
             $table->string("name");
-            $table->string("image");
+            $table->string("image")->nullable();
             $table->longText("description");
-            $table->foreignId("diode_id")->constrained()->cascadeOnDelete();
-            $table->foreignId("bypass_id")->constrained()->cascadeOnDelete();
-            $table->foreignId("block_id")->constrained()->cascadeOnDelete();
-            $table->foreignId("battery_id")->constrained()->cascadeOnDelete();
-            $table->foreignId("li_ion_id")->constrained()->cascadeOnDelete();
-            $table->foreignId("li_pol_id")->constrained()->cascadeOnDelete();
+            $table->foreignId("product_id")->constrained()->cascadeOnDelete();
+            $table->foreignId("categorey_id")->constrained()->cascadeOnDelete();
             $table->timestamps();
         });
     }
