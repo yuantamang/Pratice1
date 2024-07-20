@@ -10,15 +10,16 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class CategoryRelationManager extends RelationManager
+class CategoreyRelationManager extends RelationManager
 {
-    protected static string $relationship = 'Category';
+    protected static string $relationship = 'categorey';
 
     public function form(Form $form): Form
     {
         return $form
             ->schema([
                 Forms\Components\FileUpload::make('image')
+                    ->required()
                     ->image(),
             ]);
     }
@@ -28,7 +29,8 @@ class CategoryRelationManager extends RelationManager
         return $table
             ->recordTitleAttribute('image')
             ->columns([
-                Tables\Columns\ImageColumn::make('image'),
+                Tables\Columns\ImageColumn::make('image')
+                ->circular(),
             ])
             ->filters([
                 //
