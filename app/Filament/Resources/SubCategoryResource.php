@@ -4,6 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\SubCategoryResource\Pages;
 use App\Filament\Resources\SubCategoryResource\RelationManagers;
+use App\Filament\Resources\SubCategoryResource\RelationManagers\OrdersRelationManager;
 use App\Models\SubCategory;
 use Filament\Forms;
 use Filament\Forms\Form;
@@ -79,7 +80,7 @@ class SubCategoryResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+            OrdersRelationManager::class
         ];
     }
 

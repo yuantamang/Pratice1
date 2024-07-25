@@ -4,6 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\ProductResource\Pages;
 use App\Filament\Resources\ProductResource\RelationManagers;
+use App\Filament\Resources\ProductResource\RelationManagers\CategoriesRelationManager;
 use App\Models\Product;
 use Filament\Forms;
 use Filament\Forms\Form;
@@ -26,13 +27,14 @@ class ProductResource extends Resource
             ->schema([
                 Forms\Components\TextInput::make('title')
                     ->maxLength(255)
-                    ->default(null),
+                    ->default(null)
+                    ->prefix("Title"),
                 Forms\Components\TextInput::make('name')
                     ->maxLength(255)
                     ->default(null),
                 Forms\Components\FileUpload::make('image')
                     ->image(),
-                Forms\Components\Textarea::make('description')
+                Forms\Components\RichEditor::make('description')
                     ->columnSpanFull(),
             ]);
     }
@@ -72,7 +74,7 @@ class ProductResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+            CategoriesRelationManager::class
         ];
     }
 
