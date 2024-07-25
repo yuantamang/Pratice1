@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string("title");
             $table->string("name");
-            $table->string("image");
+            $table->string("image")->unique();
             $table->foreignId("product_id")->constrained("products")->cascadeOnDelete();
             $table->foreignId("categorey_id")->constrained("categoreys")->cascadeOnDelete();
             $table->foreignId("bulb_id")->constrained("bulbs")->cascadeOnDelete();

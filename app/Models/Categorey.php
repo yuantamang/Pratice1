@@ -12,13 +12,4 @@ class Categorey extends Model
     protected $casts = [
         'image' => 'array',
     ];
-    /**
-     * Get the product that owns the Categorey
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
-     */
-    public function product(): BelongsTo
-    {
-        return $this->belongsTo(Product::class);
-    }
 }
